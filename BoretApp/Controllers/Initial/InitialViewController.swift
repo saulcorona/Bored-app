@@ -2,7 +2,7 @@
 //  InitialViewController.swift
 //  BoretApp
 //
-//  Created by Sebastian San Blas on 03/11/2021.
+//  Created by Saul Corona Santos on 03/11/21.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
