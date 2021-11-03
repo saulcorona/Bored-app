@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404E4747273325E200F90829 /* terms in Resources */ = {isa = PBXBuildFile; fileRef = 404E4746273325E200F90829 /* terms */; };
 		407DD4A02733128E005E274E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD49E2733128E005E274E /* InitialViewController.swift */; };
 		407DD4A12733128E005E274E /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD49F2733128E005E274E /* InitialViewController.xib */; };
 		407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A3273312CA005E274E /* TermsViewController.swift */; };
 		407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD4A4273312CA005E274E /* TermsViewController.xib */; };
 		407DD4A927331340005E274E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A82733133F005E274E /* Services.swift */; };
 		407DD4AC27331397005E274E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4AB27331397005E274E /* Structs.swift */; };
+		588FC68EF012C1B73C8630BE /* Pods_BoretApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F0511025B0F3655DA4815 /* Pods_BoretApp.framework */; };
 		F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE3E402733103A003ED2EB /* AppDelegate.swift */; };
 		F7BE3E432733103A003ED2EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE3E422733103A003ED2EB /* SceneDelegate.swift */; };
 		F7BE3E4A27331042003ED2EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BE3E4927331042003ED2EB /* Assets.xcassets */; };
@@ -20,12 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		404E4746273325E200F90829 /* terms */ = {isa = PBXFileReference; explicitFileType = text; path = terms; sourceTree = "<group>"; };
 		407DD49E2733128E005E274E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		407DD49F2733128E005E274E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		407DD4A3273312CA005E274E /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		407DD4A4273312CA005E274E /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		407DD4A82733133F005E274E /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		407DD4AB27331397005E274E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		971F0511025B0F3655DA4815 /* Pods_BoretApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoretApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1770E965975591A68709F8C /* Pods-BoretApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.debug.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E7AF533BB6BCEFB2C2CC0FDE /* Pods-BoretApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.release.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.release.xcconfig"; sourceTree = "<group>"; };
 		F7BE3E3D2733103A003ED2EB /* BoretApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoretApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BE3E402733103A003ED2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7BE3E422733103A003ED2EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588FC68EF012C1B73C8630BE /* Pods_BoretApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34F00A7BBDA9E4CBD9B5F977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				971F0511025B0F3655DA4815 /* Pods_BoretApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		407DD49A27331190005E274E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,7 @@
 			children = (
 				407DD4A3273312CA005E274E /* TermsViewController.swift */,
 				407DD4A4273312CA005E274E /* TermsViewController.xib */,
+				404E4746273325E200F90829 /* terms */,
 			);
 			path = Terms;
 			sourceTree = "<group>";
@@ -107,11 +123,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		8411C024C1CE705BC04353DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1770E965975591A68709F8C /* Pods-BoretApp.debug.xcconfig */,
+				E7AF533BB6BCEFB2C2CC0FDE /* Pods-BoretApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F7BE3E342733103A003ED2EB = {
 			isa = PBXGroup;
 			children = (
 				F7BE3E3F2733103A003ED2EB /* BoretApp */,
 				F7BE3E3E2733103A003ED2EB /* Products */,
+				8411C024C1CE705BC04353DE /* Pods */,
+				34F00A7BBDA9E4CBD9B5F977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7BE3E5127331042003ED2EB /* Build configuration list for PBXNativeTarget "BoretApp" */;
 			buildPhases = (
+				96478A1EF817CE61D51D16F0 /* [CP] Check Pods Manifest.lock */,
 				F7BE3E392733103A003ED2EB /* Sources */,
 				F7BE3E3A2733103A003ED2EB /* Frameworks */,
 				F7BE3E3B2733103A003ED2EB /* Resources */,
+				EC3F72F4A6E21FA45322DC7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,10 +226,53 @@
 				F7BE3E4A27331042003ED2EB /* Assets.xcassets in Resources */,
 				407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */,
 				407DD4A12733128E005E274E /* InitialViewController.xib in Resources */,
+				404E4747273325E200F90829 /* terms in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96478A1EF817CE61D51D16F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoretApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3F72F4A6E21FA45322DC7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoretApp/Pods-BoretApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoretApp/Pods-BoretApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoretApp/Pods-BoretApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7BE3E392733103A003ED2EB /* Sources */ = {
@@ -347,6 +420,7 @@
 		};
 		F7BE3E5227331042003ED2EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1770E965975591A68709F8C /* Pods-BoretApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,6 +441,7 @@
 		};
 		F7BE3E5327331042003ED2EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7AF533BB6BCEFB2C2CC0FDE /* Pods-BoretApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
