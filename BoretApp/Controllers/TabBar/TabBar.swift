@@ -18,7 +18,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     func setupViewControllers() {
         viewControllers = [
-            createNavController(for: CategoriesViewController(), title: NSLocalizedString("Categories", comment: ""), image: UIImage(systemName: "list.dash")!)
+            createNavController(for: CategoriesViewController(), title: NSLocalizedString("Categories", comment: ""), image: UIImage(systemName: "list.dash")!),
+            createNavController(for: ActivityViewController(), title: NSLocalizedString("Random", comment: ""), image: UIImage(systemName: "shuffle")!)
         ]
     }
     
