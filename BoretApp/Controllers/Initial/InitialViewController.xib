@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="BoretApp" customModuleProvider="target">
             <connections>
+                <outlet property="userTextField" destination="HQD-FQ-dgM" id="djK-qR-aQz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,19 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zW8-xs-l0f">
-                    <rect key="frame" x="16" y="460" width="354" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                    <state key="normal" title="START">
-                        <color key="titleColor" white="0.92233767209999995" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="HQD-FQ-dgM">
-                    <rect key="frame" x="21" y="393" width="353" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQD-FQ-dgM">
+                    <rect key="frame" x="30" y="393" width="354" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="QfR-Yr-M1C"/>
+                        <constraint firstAttribute="width" constant="354" id="l3r-4w-DGU"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -46,15 +40,24 @@
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Participantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuf-fo-GFi">
-                    <rect key="frame" x="20" y="362" width="108" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW8-xs-l0f">
+                    <rect key="frame" x="30" y="496" width="354" height="50"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="354" id="5YD-6c-BvM"/>
+                        <constraint firstAttribute="height" constant="50" id="Z9h-Dx-cmG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <state key="normal" title="START">
+                        <color key="titleColor" white="0.92233767209999995" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startGameBored:" destination="-1" eventType="touchUpInside" id="kzj-jw-Znl"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-9Y-UOE">
-                    <rect key="frame" x="132" y="522" width="150" height="33"/>
+                    <rect key="frame" x="132" y="558" width="150" height="33"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <state key="normal" title="Terms &amp; Conditions">
                         <color key="titleColor" name="AccentColor"/>
@@ -63,11 +66,24 @@
                         <action selector="goToTermsConditions:" destination="-1" eventType="touchUpInside" id="MBO-lj-0WU"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuf-fo-GFi">
+                    <rect key="frame" x="30" y="364" width="98" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="HQD-FQ-dgM" firstAttribute="top" secondItem="cuf-fo-GFi" secondAttribute="bottom" constant="10" id="1O3-M5-v3g"/>
                 <constraint firstItem="d55-9Y-UOE" firstAttribute="top" secondItem="zW8-xs-l0f" secondAttribute="bottom" constant="12" id="4fJ-IL-oj1"/>
+                <constraint firstItem="HQD-FQ-dgM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="349" id="C42-Th-1db"/>
+                <constraint firstItem="cuf-fo-GFi" firstAttribute="leading" secondItem="HQD-FQ-dgM" secondAttribute="leading" id="WeT-NJ-JRH"/>
+                <constraint firstItem="zW8-xs-l0f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="452" id="ZjG-xY-MMI"/>
+                <constraint firstItem="zW8-xs-l0f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cWi-Xd-gDI"/>
+                <constraint firstItem="cuf-fo-GFi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="318" id="iw1-uz-POW"/>
+                <constraint firstItem="HQD-FQ-dgM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p3M-Sb-fbd"/>
                 <constraint firstItem="d55-9Y-UOE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="se6-q9-l7g"/>
             </constraints>
             <point key="canvasLocation" x="-263.07692307692309" y="127.96208530805687"/>
