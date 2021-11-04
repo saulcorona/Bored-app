@@ -46,7 +46,8 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+        showQuestions()
     }
     
     // MARK: - UITableViewDataSource
@@ -60,5 +61,11 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
            cell.textLabel?.text = categories[indexPath.row]
            cell.accessoryType = .disclosureIndicator
            return cell
+    }
+    
+    private func showQuestions() {
+        let activityViewController = ActivityViewController(nibName: "ActivityViewController", bundle: nil)
+        activityViewController.title = "Seba"
+        navigationController?.pushViewController(activityViewController, animated: true)
     }
 }
