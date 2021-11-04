@@ -13,6 +13,8 @@
 		407DD4A927331340005E274E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A82733133F005E274E /* Services.swift */; };
 		407DD4AC27331397005E274E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4AB27331397005E274E /* Structs.swift */; };
 		F55FE76F7FF6F7E68BDA9159 /* Pods_BoretApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */; };
+		F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D36532734413600AC9C1E /* CategoriesViewController.swift */; };
+		F73D36562734413600AC9C1E /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D36542734413600AC9C1E /* CategoriesViewController.xib */; };
 		F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C65B92733262800549E05 /* InitialViewController.swift */; };
 		F74C65BC2733262800549E05 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74C65BA2733262800549E05 /* InitialViewController.xib */; };
 		F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE3E402733103A003ED2EB /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		407DD4A82733133F005E274E /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		407DD4AB27331397005E274E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		898305351D2A9996FC1C62BA /* Pods-BoretApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.release.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.release.xcconfig"; sourceTree = "<group>"; };
+		F73D36532734413600AC9C1E /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		F73D36542734413600AC9C1E /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		F74C65B92733262800549E05 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		F74C65BA2733262800549E05 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		F7BE3E3D2733103A003ED2EB /* BoretApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoretApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,7 @@
 		407DD49C27331273005E274E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F73D36522734410B00AC9C1E /* Categories */,
 				407DD49D2733127D005E274E /* Initial */,
 				407DD4A2273312B0005E274E /* Terms */,
 			);
@@ -131,6 +136,15 @@
 				898305351D2A9996FC1C62BA /* Pods-BoretApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F73D36522734410B00AC9C1E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F73D36532734413600AC9C1E /* CategoriesViewController.swift */,
+				F73D36542734413600AC9C1E /* CategoriesViewController.xib */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		F7885774273334F800A654ED /* Recovered References */ = {
@@ -233,6 +247,7 @@
 			files = (
 				F7BE3E4D27331042003ED2EB /* LaunchScreen.storyboard in Resources */,
 				F7BE3E4A27331042003ED2EB /* Assets.xcassets in Resources */,
+				F73D36562734413600AC9C1E /* CategoriesViewController.xib in Resources */,
 				407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */,
 				F74C65BC2733262800549E05 /* InitialViewController.xib in Resources */,
 				404E4747273325E200F90829 /* terms in Resources */,
@@ -293,6 +308,7 @@
 				F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */,
 				F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */,
 				407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */,
+				F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */,
 				F7BE3E432733103A003ED2EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

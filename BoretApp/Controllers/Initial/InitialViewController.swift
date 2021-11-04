@@ -10,7 +10,8 @@ import UIKit
 class InitialViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userTextField: UITextField!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animateKeyboard()
@@ -20,7 +21,8 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         userTextField.layer.borderWidth = 1
         userTextField.layer.cornerRadius = 4.0
     }
-
+    
+   
     @IBAction func goToTermsConditions(_ sender: UIButton) {
         goToTermsController()
     }
@@ -28,7 +30,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func startGameBored(_ sender: Any) {
         if userTextField.hasText {
-            print("Works")
+            showCategories() 
         } else {
             showAlert(title: "You have to enter a number ☹️",
                 message: nil,
@@ -43,6 +45,13 @@ extension InitialViewController{
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    private func showCategories() {
+        let vc = CategoriesViewController(nibName: "CategoriesViewController", bundle: nil)
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            self.present(vc, animated: true, completion: nil)
     }
 }
 
