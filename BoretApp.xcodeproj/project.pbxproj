@@ -14,6 +14,8 @@
 		407DD4AC27331397005E274E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4AB27331397005E274E /* Structs.swift */; };
 		40F4885D27342ED200EFAA70 /* RandomServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4885C27342ED200EFAA70 /* RandomServices.swift */; };
 		40F4885F2734300200EFAA70 /* TypeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4885E2734300200EFAA70 /* TypeServices.swift */; };
+		40F48863273443E700EFAA70 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F48861273443E700EFAA70 /* ActivityViewController.swift */; };
+		40F48864273443E700EFAA70 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F48862273443E700EFAA70 /* ActivityViewController.xib */; };
 		F55FE76F7FF6F7E68BDA9159 /* Pods_BoretApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */; };
 		F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D36532734413600AC9C1E /* CategoriesViewController.swift */; };
 		F73D36562734413600AC9C1E /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D36542734413600AC9C1E /* CategoriesViewController.xib */; };
@@ -36,6 +38,8 @@
 		407DD4AB27331397005E274E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		40F4885C27342ED200EFAA70 /* RandomServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomServices.swift; sourceTree = "<group>"; };
 		40F4885E2734300200EFAA70 /* TypeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeServices.swift; sourceTree = "<group>"; };
+		40F48861273443E700EFAA70 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		40F48862273443E700EFAA70 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		898305351D2A9996FC1C62BA /* Pods-BoretApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.release.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.release.xcconfig"; sourceTree = "<group>"; };
 		F73D36532734413600AC9C1E /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		F73D36542734413600AC9C1E /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F73D36522734410B00AC9C1E /* Categories */,
+				40F48860273443B100EFAA70 /* Antivity */,
 				407DD49D2733127D005E274E /* Initial */,
 				407DD4A2273312B0005E274E /* Terms */,
 			);
@@ -133,6 +138,15 @@
 				407DD4AB27331397005E274E /* Structs.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		40F48860273443B100EFAA70 /* Antivity */ = {
+			isa = PBXGroup;
+			children = (
+				40F48861273443E700EFAA70 /* ActivityViewController.swift */,
+				40F48862273443E700EFAA70 /* ActivityViewController.xib */,
+			);
+			path = Antivity;
 			sourceTree = "<group>";
 		};
 		C0D6C676859E76FD4504B59D /* Pods */ = {
@@ -255,6 +269,7 @@
 				F7BE3E4A27331042003ED2EB /* Assets.xcassets in Resources */,
 				F73D36562734413600AC9C1E /* CategoriesViewController.xib in Resources */,
 				407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */,
+				40F48864273443E700EFAA70 /* ActivityViewController.xib in Resources */,
 				F74C65BC2733262800549E05 /* InitialViewController.xib in Resources */,
 				404E4747273325E200F90829 /* terms in Resources */,
 			);
@@ -313,6 +328,7 @@
 				407DD4A927331340005E274E /* Services.swift in Sources */,
 				F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */,
 				40F4885F2734300200EFAA70 /* TypeServices.swift in Sources */,
+				40F48863273443E700EFAA70 /* ActivityViewController.swift in Sources */,
 				F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */,
 				407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */,
 				F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */,
@@ -459,13 +475,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR3AT8K88Z;
+				DEVELOPMENT_TEAM = CL3UD6U437;
 				INFOPLIST_FILE = BoretApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy.BoretApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,13 +496,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BR3AT8K88Z;
+				DEVELOPMENT_TEAM = CL3UD6U437;
 				INFOPLIST_FILE = BoretApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy.BoretApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

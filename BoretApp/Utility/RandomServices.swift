@@ -11,7 +11,6 @@ import ProgressHUD
 class RandomServices {
     
     func getRandomActivity(for participants: Int?, completion: @escaping ([Activity]) -> Void) {
-        ProgressHUD.show()
         let randomURL = Services.activityRandom(participants: participants)
         Services.getServices(url: randomURL) { response in
             switch response {
@@ -23,7 +22,6 @@ class RandomServices {
                         return
                     }
                     let activity = try JSONDecoder().decode(Activity.self, from: data!)
-                    ProgressHUD.dismiss()
                     completion([activity])
                 } catch {
                     ProgressHUD.showError("Falló.", image: nil, interaction: true)
