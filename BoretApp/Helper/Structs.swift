@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+// MARK: - Activity
+struct Activity: Codable {
+    let name, type: String
+    let participants: Int
+    let price: Double
+}
+
+extension Activity {
+    enum CodingKeys: String, CodingKey {
+        case type, participants, price
+        case name = "activity"
+    }
+}
