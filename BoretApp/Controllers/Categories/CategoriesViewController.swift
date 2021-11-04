@@ -31,6 +31,8 @@ class CategoriesViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.rowHeight = 80
         tableView.tableFooterView = UIView()
+        
+        print(User.shared.participants!)
     }
     
     private func getCategories(){

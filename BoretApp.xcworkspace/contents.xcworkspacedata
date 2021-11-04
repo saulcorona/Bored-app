@@ -7,11 +7,4 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
-   <Group
-      location = "container:"
-      name = "Documentation">
-      <FileRef
-         location = "group:ToDo.md">
-      </FileRef>
-   </Group>
 </Workspace>

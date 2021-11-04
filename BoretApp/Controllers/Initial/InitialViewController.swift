@@ -30,6 +30,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func startGameBored(_ sender: Any) {
         if userTextField.hasText {
+            User.shared.participants = Int(userTextField.text!)
             showCategories() 
         } else {
             showAlert(title: "You have to enter a number ☹️",
@@ -48,10 +49,9 @@ extension InitialViewController{
     }
     
     private func showCategories() {
-        let vc = CategoriesViewController(nibName: "CategoriesViewController", bundle: nil)
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .flipHorizontal
-            self.present(vc, animated: true, completion: nil)
+        let tabBarControler = TabBarController()
+                tabBarControler.modalPresentationStyle = .fullScreen
+                self.present(tabBarControler, animated: true)
     }
 }
 
