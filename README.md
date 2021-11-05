@@ -11,7 +11,7 @@
 
 Inside the project runs
 
-Suggest run deintegrate firs
+Suggest run deintegrate first
 
 `pod deintegrate`
 
