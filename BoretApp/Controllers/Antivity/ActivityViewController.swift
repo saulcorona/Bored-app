@@ -19,6 +19,8 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var tryAnotherOutlet: UIButton!
     
+    private var viewModel: ActivityModel?
+    
     var typeActivity: String = ""
     var isLoading: Bool = true
     var fromRandom: Bool = true
@@ -26,8 +28,8 @@ class ActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ActivityModel(activityServices: RandomServices(), typeServices: TypeServices())
         initialSetup(isLoading: isLoading)
-//        loadValues()
         setupUI()
     }
 
@@ -51,37 +53,31 @@ extension ActivityViewController {
     func loadValues() {
         ProgressHUD.show()
         if fromRandom {
-            RandomServices().getRandomActivity(for: User.shared.participants!) { result in
+            viewModel?.getRandomActivity(for: User.shared.participants!, completition: {
                 ProgressHUD.dismiss()
-                if !result.isEmpty {
-                    self.activity = result[0]
-                    self.setupLabels()
-//                    ProgressHUD.dismiss()
-                } else {
-//                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                if self.viewModel?.activity.participants != User.shared.participants {
                     self.showErrorController()
+                } else {
+                    self.setupLabels()
                 }
-            }
+            })
         } else {
-            TypeServices().getTypeActivity(for: User.shared.participants!, with: typeActivity) { result in
+            viewModel?.getTypeActivity(for: User.shared.participants!, with: typeActivity, completition: {
                 ProgressHUD.dismiss()
-                print(result)
-                if !result.isEmpty {
-                    self.activity = result[0]
-                    self.setupLabels()
-//                    ProgressHUD.dismiss()
-                } else {
-//                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                if self.viewModel?.activity.participants != User.shared.participants {
                     self.showErrorController()
+                } else {
+                    self.setupLabels()
                 }
-            }
+            })
         }
     }
 
     func setupLabels() {
+        activity = viewModel?.activity
         activityNameLabel.text = activity.name
         participantsLabel.text = String(activity.participants)
-        priceLabel.text = convertToPriceString(input: activity.price)
+        priceLabel.text = Price.convertToPriceString(input: activity.price)
         typeLabel.text = activity.type.firstUppercased
         initialSetup(isLoading: false)
     }
@@ -96,23 +92,4 @@ extension ActivityViewController {
         vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         self.present(vc, animated: true, completion: nil)
     }
-}
-
-extension ActivityViewController {
-    
-    func convertToPriceString(input: Double) -> String {
-        switch input {
-        case 0:
-            return "Free"
-        case 0...0.3:
-            return "Low"
-        case 0.3...0.6:
-            return "Medium"
-        case 0.6...:
-            return "High"
-        default:
-            return "N/A"
-        }
-    }
-
 }
