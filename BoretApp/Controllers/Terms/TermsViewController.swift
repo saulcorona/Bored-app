@@ -25,7 +25,6 @@ class TermsViewController: UIViewController {
     }
 
     @IBAction func dismissTermsTapped(_ sender: Any) {
-        print("dismiss work!")
         self.dismiss(animated: true, completion: nil)
     }
 }
