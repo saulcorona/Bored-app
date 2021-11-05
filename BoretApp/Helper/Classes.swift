@@ -14,3 +14,20 @@ class User {
     
     var participants: Int?
 }
+
+class another {
+    func convertToPriceString(input: Double) -> String {
+        switch input {
+        case 0:
+            return "Free"
+        case 0...0.3:
+            return "Low"
+        case 0.3...0.6:
+            return "Medium"
+        case 0.6...:
+            return "High"
+        default:
+            return "N/A"
+        }
+    }
+}
