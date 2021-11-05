@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40184BE12734AA4500F361EF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40184BE02734AA4500F361EF /* TextField.swift */; };
 		404E4747273325E200F90829 /* terms in Resources */ = {isa = PBXBuildFile; fileRef = 404E4746273325E200F90829 /* terms */; };
 		407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A3273312CA005E274E /* TermsViewController.swift */; };
 		407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD4A4273312CA005E274E /* TermsViewController.xib */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoretApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C84FA5BE0591030BD303472 /* Pods-BoretApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.debug.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.debug.xcconfig"; sourceTree = "<group>"; };
+		40184BE02734AA4500F361EF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		404E4746273325E200F90829 /* terms */ = {isa = PBXFileReference; explicitFileType = text; path = terms; sourceTree = "<group>"; };
 		407DD49F2733128E005E274E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		407DD4A3273312CA005E274E /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 				1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40184BDF2734AA2B00F361EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40184BE02734AA4500F361EF /* TextField.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		407DD49A27331190005E274E /* Resources */ = {
@@ -203,6 +213,7 @@
 		F7BE3E3F2733103A003ED2EB /* BoretApp */ = {
 			isa = PBXGroup;
 			children = (
+				40184BDF2734AA2B00F361EF /* Extension */,
 				407DD4AA2733134A005E274E /* Helper */,
 				407DD4A7273312E4005E274E /* Utility */,
 				407DD49C27331273005E274E /* Controllers */,
@@ -343,6 +354,7 @@
 				F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */,
 				40F4885F2734300200EFAA70 /* TypeServices.swift in Sources */,
 				40F48863273443E700EFAA70 /* ActivityViewController.swift in Sources */,
+				40184BE12734AA4500F361EF /* TextField.swift in Sources */,
 				F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */,
 				407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */,
 				F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */,
