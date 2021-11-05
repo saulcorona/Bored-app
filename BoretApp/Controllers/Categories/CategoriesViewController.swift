@@ -66,7 +66,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     
     private func showQuestions(for type: String) {
         let activityViewController = ActivityViewController(nibName: "ActivityViewController", bundle: nil)
-        activityViewController.title = "Seba"
+        activityViewController.title = type
         activityViewController.typeActivity = type
         navigationController?.pushViewController(activityViewController, animated: true)
     }

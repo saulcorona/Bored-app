@@ -24,9 +24,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        if self.selectedIndex == 1 {
+        if self.selectedIndex == 0 {
             let rootView = self.viewControllers![self.selectedIndex] as! UINavigationController
-            rootView.popToRootViewController(animated: true)
+            rootView.popToRootViewController(animated: false)
         }
     }
 }
@@ -39,8 +39,11 @@ extension TabBarController {
                                                     image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.image = image
-        navController.navigationBar.prefersLargeTitles = true
-        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navController.navigationBar.prefersLargeTitles = false
+//        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navController.navigationBar.tintColor = .white
         navController.navigationBar.backgroundColor = .systemGreen
         rootViewController.title = title
         rootViewController.navigationItem.title = title
