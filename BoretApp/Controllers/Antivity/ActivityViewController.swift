@@ -77,7 +77,7 @@ extension ActivityViewController {
         activityNameLabel.text = activity.name
         participantsLabel.text = String(activity.participants)
         priceLabel.text = String(activity.price)
-        typeLabel.text = activity.type
+        typeLabel.text = activity.type.firstUppercased
         initialSetup(isLoading: false)
     }
 

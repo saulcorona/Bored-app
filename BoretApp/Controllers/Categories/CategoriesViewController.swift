@@ -13,7 +13,7 @@ class CategoriesViewController: UIViewController {
     
     private var categories: [String] = [
         "Education",
-        "recreational",
+        "Recreational",
         "Social",
         "Diy",
         "Charity",
@@ -67,7 +67,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     private func showQuestions(for type: String) {
         let activityViewController = ActivityViewController(nibName: "ActivityViewController", bundle: nil)
         activityViewController.title = type
-        activityViewController.typeActivity = type
+        activityViewController.typeActivity = type.lowercased()
         navigationController?.pushViewController(activityViewController, animated: true)
     }
 }

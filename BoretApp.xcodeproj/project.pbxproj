@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40184BE12734AA4500F361EF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40184BE02734AA4500F361EF /* TextField.swift */; };
+		402C27022734CE5600C2462D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C27012734CE5600C2462D /* String.swift */; };
 		404E4747273325E200F90829 /* terms in Resources */ = {isa = PBXBuildFile; fileRef = 404E4746273325E200F90829 /* terms */; };
 		407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A3273312CA005E274E /* TermsViewController.swift */; };
 		407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD4A4273312CA005E274E /* TermsViewController.xib */; };
@@ -34,6 +35,7 @@
 		1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoretApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C84FA5BE0591030BD303472 /* Pods-BoretApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.debug.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.debug.xcconfig"; sourceTree = "<group>"; };
 		40184BE02734AA4500F361EF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		402C27012734CE5600C2462D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		404E4746273325E200F90829 /* terms */ = {isa = PBXFileReference; explicitFileType = text; path = terms; sourceTree = "<group>"; };
 		407DD49F2733128E005E274E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		407DD4A3273312CA005E274E /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				40184BE02734AA4500F361EF /* TextField.swift */,
+				402C27012734CE5600C2462D /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				407DD4A927331340005E274E /* Services.swift in Sources */,
 				F7BE3E412733103A003ED2EB /* AppDelegate.swift in Sources */,
 				40F4885F2734300200EFAA70 /* TypeServices.swift in Sources */,
+				402C27022734CE5600C2462D /* String.swift in Sources */,
 				40F48863273443E700EFAA70 /* ActivityViewController.swift in Sources */,
 				40184BE12734AA4500F361EF /* TextField.swift in Sources */,
 				F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */,
