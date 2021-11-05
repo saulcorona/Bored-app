@@ -16,7 +16,7 @@ class Services {
         guard participants != nil else {
             return String(format: "%@/api/activity?participants=1", endpointURL)
         }
-        return String(format: "%@/api/activity?participants=&@", endpointURL, String(participants!))
+        return String(format: "%@/api/activity?participants=%@", endpointURL, String(participants!))
     }
 
     static func activityType(participants: Int? = nil, type: String) -> String {
