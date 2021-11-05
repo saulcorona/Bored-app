@@ -8,4 +8,5 @@ target 'BoretApp' do
   # Pods for BoretApp
   pod 'Alamofire'
   pod 'ProgressHUD'
+  pod 'SwiftEntryKit'
 end

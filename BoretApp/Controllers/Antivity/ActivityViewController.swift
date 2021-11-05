@@ -52,22 +52,27 @@ extension ActivityViewController {
         ProgressHUD.show()
         if fromRandom {
             RandomServices().getRandomActivity(for: User.shared.participants!) { result in
+                ProgressHUD.dismiss()
                 if !result.isEmpty {
                     self.activity = result[0]
                     self.setupLabels()
-                    ProgressHUD.dismiss()
+//                    ProgressHUD.dismiss()
                 } else {
-                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+//                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                    self.showErrorController()
                 }
             }
         } else {
             TypeServices().getTypeActivity(for: User.shared.participants!, with: typeActivity) { result in
+                ProgressHUD.dismiss()
+                print(result)
                 if !result.isEmpty {
                     self.activity = result[0]
                     self.setupLabels()
-                    ProgressHUD.dismiss()
+//                    ProgressHUD.dismiss()
                 } else {
-                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+//                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                    self.showErrorController()
                 }
             }
         }
@@ -83,6 +88,13 @@ extension ActivityViewController {
 
     func setupUI() {
         typeStackView.isHidden = !fromRandom
+    }
+    
+    func showErrorController() {
+        let vc = ErrorViewController(nibName: "ErrorViewController", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

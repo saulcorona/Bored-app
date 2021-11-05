@@ -11,6 +11,8 @@
 		402C27022734CE5600C2462D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C27012734CE5600C2462D /* String.swift */; };
 		402C270E2734D24A00C2462D /* BoretAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C270D2734D24A00C2462D /* BoretAppTests.swift */; };
 		402C27142734D27800C2462D /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1E587273484FF00E4C293 /* Classes.swift */; };
+		4031752C27354D4D0079BCE2 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4031752A27354D4D0079BCE2 /* ErrorViewController.swift */; };
+		4031752D27354D4D0079BCE2 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4031752B27354D4D0079BCE2 /* ErrorViewController.xib */; };
 		404E4747273325E200F90829 /* terms in Resources */ = {isa = PBXBuildFile; fileRef = 404E4746273325E200F90829 /* terms */; };
 		407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A3273312CA005E274E /* TermsViewController.swift */; };
 		407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD4A4273312CA005E274E /* TermsViewController.xib */; };
@@ -50,6 +52,8 @@
 		402C27012734CE5600C2462D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		402C270B2734D24A00C2462D /* BoretAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoretAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		402C270D2734D24A00C2462D /* BoretAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoretAppTests.swift; sourceTree = "<group>"; };
+		4031752A27354D4D0079BCE2 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		4031752B27354D4D0079BCE2 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
 		404E4746273325E200F90829 /* terms */ = {isa = PBXFileReference; explicitFileType = text; path = terms; sourceTree = "<group>"; };
 		407DD49F2733128E005E274E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		407DD4A3273312CA005E274E /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 			path = BoretAppTests;
 			sourceTree = "<group>";
 		};
+		4031752927354D0A0079BCE2 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				4031752A27354D4D0079BCE2 /* ErrorViewController.swift */,
+				4031752B27354D4D0079BCE2 /* ErrorViewController.xib */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		407DD49A27331190005E274E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 				F73D36522734410B00AC9C1E /* Categories */,
 				40F48860273443B100EFAA70 /* Antivity */,
 				407DD49D2733127D005E274E /* Initial */,
+				4031752927354D0A0079BCE2 /* Error */,
 				407DD4A2273312B0005E274E /* Terms */,
 			);
 			path = Controllers;
@@ -363,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7BE3E4D27331042003ED2EB /* LaunchScreen.storyboard in Resources */,
+				4031752D27354D4D0079BCE2 /* ErrorViewController.xib in Resources */,
 				F7BE3E4A27331042003ED2EB /* Assets.xcassets in Resources */,
 				F73D36562734413600AC9C1E /* CategoriesViewController.xib in Resources */,
 				407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */,
@@ -437,6 +452,7 @@
 				402C27022734CE5600C2462D /* String.swift in Sources */,
 				40F48863273443E700EFAA70 /* ActivityViewController.swift in Sources */,
 				40184BE12734AA4500F361EF /* TextField.swift in Sources */,
+				4031752C27354D4D0079BCE2 /* ErrorViewController.swift in Sources */,
 				F74C65BB2733262800549E05 /* InitialViewController.swift in Sources */,
 				407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */,
 				F73D36552734413600AC9C1E /* CategoriesViewController.swift in Sources */,

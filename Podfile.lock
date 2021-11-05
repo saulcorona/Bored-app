@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.4)
   - ProgressHUD (13.6)
+  - SwiftEntryKit (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - ProgressHUD
+  - SwiftEntryKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - ProgressHUD
+    - SwiftEntryKit
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
 
-PODFILE CHECKSUM: ef589e3eb2bba23915ad6325340a9adebd2dfcaf
+PODFILE CHECKSUM: b39c9fe622696100e4963ff48ba6ace1bffe4bfc
 
 COCOAPODS: 1.11.2

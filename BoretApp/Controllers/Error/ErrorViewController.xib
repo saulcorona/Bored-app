@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorViewController" customModule="BoretApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-Gw-adg">
+                    <rect key="frame" x="37" y="313" width="340" height="270"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="technical_difficulties" translatesAutoresizingMaskIntoConstraints="NO" id="o2U-Qc-Z5J">
+                            <rect key="frame" x="4" y="4" width="332" height="190"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="190" id="813-Ou-zpa"/>
+                                <constraint firstAttribute="width" constant="332" id="kXo-yP-jb2"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB3-vP-af8">
+                            <rect key="frame" x="20" y="223" width="300" height="34.5"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Please, try later">
+                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="reloadTapped:" destination="-1" eventType="touchUpInside" id="vtp-yH-ZdQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VB3-vP-af8" secondAttribute="trailing" constant="20" id="1XG-qt-TA2"/>
+                        <constraint firstItem="o2U-Qc-Z5J" firstAttribute="leading" secondItem="zwf-Gw-adg" secondAttribute="leading" constant="4" id="Jws-4i-deO"/>
+                        <constraint firstAttribute="height" constant="270" id="LZp-gj-TrY"/>
+                        <constraint firstItem="o2U-Qc-Z5J" firstAttribute="top" secondItem="zwf-Gw-adg" secondAttribute="top" constant="4" id="OoB-wp-2wD"/>
+                        <constraint firstItem="VB3-vP-af8" firstAttribute="leading" secondItem="zwf-Gw-adg" secondAttribute="leading" constant="20" id="Pka-l6-egU"/>
+                        <constraint firstItem="VB3-vP-af8" firstAttribute="top" secondItem="o2U-Qc-Z5J" secondAttribute="bottom" constant="29" id="e9J-j0-xHW"/>
+                        <constraint firstAttribute="trailing" secondItem="o2U-Qc-Z5J" secondAttribute="trailing" constant="4" id="hT3-Wp-5yf"/>
+                        <constraint firstAttribute="width" constant="340" id="o40-zv-Kbf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zwf-Gw-adg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MTh-rl-PxP"/>
+                <constraint firstItem="zwf-Gw-adg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="noK-IC-1lV"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="technical_difficulties" width="1200" height="675"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

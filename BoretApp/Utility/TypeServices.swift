@@ -13,7 +13,7 @@ class TypeServices {
     func getTypeActivity(for participants: Int?,
                          with type: String,
                          completion: @escaping ([Activity]) -> Void) {
-        ProgressHUD.show()
+//        ProgressHUD.show()
         let typeURL = Services.activityType(participants: participants, type: type)
         
         Services.getServices(url: typeURL) { response in
@@ -22,19 +22,19 @@ class TypeServices {
                 do {
                     guard data != nil else {
                         completion([])
-                        ProgressHUD.showError()
+//                        ProgressHUD.showError()
                         return
                     }
                     let activity = try JSONDecoder().decode(Activity.self, from: data!)
-                    ProgressHUD.dismiss()
+//                    ProgressHUD.dismiss()
                     completion([activity])
                 } catch {
-                    ProgressHUD.showError("Falló.", image: nil, interaction: true)
+//                    ProgressHUD.showError("Falló.", image: nil, interaction: true)
                     completion([])
                 }
             case .failure(let error):
                 print(error)
-                ProgressHUD.showError("Se agotó el tiempo de espera.", image: nil, interaction: true)
+//                ProgressHUD.showError("Se agotó el tiempo de espera.", image: nil, interaction: true)
                 completion([])
             }
         }
