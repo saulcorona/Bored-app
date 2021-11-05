@@ -21,7 +21,7 @@ class ActivityViewController: UIViewController {
     
     var typeActivity: String = ""
     var isLoading: Bool = true
-    var fromRandom: Bool = false
+    var fromRandom: Bool = true
     var activity: Activity!
     
     override func viewDidLoad() {
@@ -76,12 +76,31 @@ extension ActivityViewController {
     func setupLabels() {
         activityNameLabel.text = activity.name
         participantsLabel.text = String(activity.participants)
-        priceLabel.text = String(activity.price)
+        priceLabel.text = convertToPriceString(input: activity.price)
         typeLabel.text = activity.type.firstUppercased
         initialSetup(isLoading: false)
     }
 
     func setupUI() {
-        typeStackView.isHidden = fromRandom
+        typeStackView.isHidden = !fromRandom
     }
+}
+
+extension ActivityViewController {
+    
+    func convertToPriceString(input: Double) -> String {
+        switch input {
+        case 0:
+            return "Free"
+        case 0...0.3:
+            return "Low"
+        case 0.3...0.6:
+            return "Medium"
+        case 0.6...:
+            return "High"
+        default:
+            return "N/A"
+        }
+    }
+
 }

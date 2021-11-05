@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		40184BE12734AA4500F361EF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40184BE02734AA4500F361EF /* TextField.swift */; };
 		402C27022734CE5600C2462D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C27012734CE5600C2462D /* String.swift */; };
+		402C270E2734D24A00C2462D /* BoretAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402C270D2734D24A00C2462D /* BoretAppTests.swift */; };
+		402C27142734D27800C2462D /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1E587273484FF00E4C293 /* Classes.swift */; };
 		404E4747273325E200F90829 /* terms in Resources */ = {isa = PBXBuildFile; fileRef = 404E4746273325E200F90829 /* terms */; };
 		407DD4A5273312CA005E274E /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407DD4A3273312CA005E274E /* TermsViewController.swift */; };
 		407DD4A6273312CA005E274E /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407DD4A4273312CA005E274E /* TermsViewController.xib */; };
@@ -31,11 +33,23 @@
 		F7F1E588273484FF00E4C293 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F1E587273484FF00E4C293 /* Classes.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		402C270F2734D24A00C2462D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7BE3E352733103A003ED2EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7BE3E3C2733103A003ED2EB;
+			remoteInfo = BoretApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoretApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C84FA5BE0591030BD303472 /* Pods-BoretApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoretApp.debug.xcconfig"; path = "Target Support Files/Pods-BoretApp/Pods-BoretApp.debug.xcconfig"; sourceTree = "<group>"; };
 		40184BE02734AA4500F361EF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		402C27012734CE5600C2462D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		402C270B2734D24A00C2462D /* BoretAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoretAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		402C270D2734D24A00C2462D /* BoretAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoretAppTests.swift; sourceTree = "<group>"; };
 		404E4746273325E200F90829 /* terms */ = {isa = PBXFileReference; explicitFileType = text; path = terms; sourceTree = "<group>"; };
 		407DD49F2733128E005E274E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		407DD4A3273312CA005E274E /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		402C27082734D24A00C2462D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7BE3E3A2733103A003ED2EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +97,7 @@
 		0780FD9AA144FD99FCFB6EBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				402C27032734D15700C2462D /* Tests */,
 				1E625791629036B4B49C29C4 /* Pods_BoretApp.framework */,
 			);
 			name = Frameworks;
@@ -88,6 +110,21 @@
 				402C27012734CE5600C2462D /* String.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		402C27032734D15700C2462D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		402C270C2734D24A00C2462D /* BoretAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				402C270D2734D24A00C2462D /* BoretAppTests.swift */,
+			);
+			path = BoretAppTests;
 			sourceTree = "<group>";
 		};
 		407DD49A27331190005E274E /* Resources */ = {
@@ -198,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BE3E3F2733103A003ED2EB /* BoretApp */,
+				402C270C2734D24A00C2462D /* BoretAppTests */,
 				F7BE3E3E2733103A003ED2EB /* Products */,
 				C0D6C676859E76FD4504B59D /* Pods */,
 				0780FD9AA144FD99FCFB6EBE /* Frameworks */,
@@ -209,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BE3E3D2733103A003ED2EB /* BoretApp.app */,
+				402C270B2734D24A00C2462D /* BoretAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +276,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		402C270A2734D24A00C2462D /* BoretAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 402C27112734D24A00C2462D /* Build configuration list for PBXNativeTarget "BoretAppTests" */;
+			buildPhases = (
+				402C27072734D24A00C2462D /* Sources */,
+				402C27082734D24A00C2462D /* Frameworks */,
+				402C27092734D24A00C2462D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				402C27102734D24A00C2462D /* PBXTargetDependency */,
+			);
+			name = BoretAppTests;
+			productName = BoretAppTests;
+			productReference = 402C270B2734D24A00C2462D /* BoretAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F7BE3E3C2733103A003ED2EB /* BoretApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7BE3E5127331042003ED2EB /* Build configuration list for PBXNativeTarget "BoretApp" */;
@@ -262,9 +319,13 @@
 		F7BE3E352733103A003ED2EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					402C270A2734D24A00C2462D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = F7BE3E3C2733103A003ED2EB;
+					};
 					F7BE3E3C2733103A003ED2EB = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -284,11 +345,19 @@
 			projectRoot = "";
 			targets = (
 				F7BE3E3C2733103A003ED2EB /* BoretApp */,
+				402C270A2734D24A00C2462D /* BoretAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		402C27092734D24A00C2462D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7BE3E3B2733103A003ED2EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +417,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		402C27072734D24A00C2462D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				402C27142734D27800C2462D /* Classes.swift in Sources */,
+				402C270E2734D24A00C2462D /* BoretAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F7BE3E392733103A003ED2EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +449,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		402C27102734D24A00C2462D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7BE3E3C2733103A003ED2EB /* BoretApp */;
+			targetProxy = 402C270F2734D24A00C2462D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F7BE3E4B27331042003ED2EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -383,6 +469,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		402C27122734D24A00C2462D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL3UD6U437;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy.BoretAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoretApp.app/BoretApp";
+			};
+			name = Debug;
+		};
+		402C27132734D24A00C2462D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CL3UD6U437;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alkemy.BoretAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoretApp.app/BoretApp";
+			};
+			name = Release;
+		};
 		F7BE3E4F27331042003ED2EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -544,6 +680,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		402C27112734D24A00C2462D /* Build configuration list for PBXNativeTarget "BoretAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				402C27122734D24A00C2462D /* Debug */,
+				402C27132734D24A00C2462D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F7BE3E382733103A003ED2EB /* Build configuration list for PBXProject "BoretApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

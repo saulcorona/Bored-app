@@ -68,6 +68,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
         let activityViewController = ActivityViewController(nibName: "ActivityViewController", bundle: nil)
         activityViewController.title = type
         activityViewController.typeActivity = type.lowercased()
+        activityViewController.fromRandom = false
         navigationController?.pushViewController(activityViewController, animated: true)
     }
 }
