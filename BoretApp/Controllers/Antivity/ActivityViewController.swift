@@ -19,6 +19,7 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var tryAnotherOutlet: UIButton!
     
+    var typeActivity: String = ""
     var isLoading: Bool = true
     var fromRandom: Bool = false
     var activity: Activity!
@@ -50,16 +51,24 @@ extension ActivityViewController {
     func loadValues() {
         ProgressHUD.show()
         if fromRandom {
-            RandomServices().getRandomActivity(for: 2) { result in
-                self.activity = result[0]
-                self.setupLabels()
-                ProgressHUD.dismiss()
+            RandomServices().getRandomActivity(for: User.shared.participants!) { result in
+                if !result.isEmpty {
+                    self.activity = result[0]
+                    self.setupLabels()
+                    ProgressHUD.dismiss()
+                } else {
+                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                }
             }
         } else {
-            TypeServices().getTypeActivity(for: 2, with: "social") { result in
-                self.activity = result[0]
-                self.setupLabels()
-                ProgressHUD.dismiss()
+            TypeServices().getTypeActivity(for: User.shared.participants!, with: typeActivity) { result in
+                if !result.isEmpty {
+                    self.activity = result[0]
+                    self.setupLabels()
+                    ProgressHUD.dismiss()
+                } else {
+                    ProgressHUD.showError("Ups!", image: nil, interaction: true)
+                }
             }
         }
     }

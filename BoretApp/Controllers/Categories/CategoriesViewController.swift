@@ -13,7 +13,7 @@ class CategoriesViewController: UIViewController {
     
     private var categories: [String] = [
         "Education",
-        "Recreational",
+        "recreational",
         "Social",
         "Diy",
         "Charity",
@@ -31,7 +31,6 @@ class CategoriesViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.rowHeight = 80
         tableView.tableFooterView = UIView()
-        
         print(User.shared.participants!)
     }
     
@@ -47,7 +46,9 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        showQuestions()
+//        if let type = categories[indexPath.row] {
+            showQuestions(for: categories[indexPath.row])
+//        }
     }
     
     // MARK: - UITableViewDataSource
@@ -63,9 +64,10 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
            return cell
     }
     
-    private func showQuestions() {
+    private func showQuestions(for type: String) {
         let activityViewController = ActivityViewController(nibName: "ActivityViewController", bundle: nil)
         activityViewController.title = "Seba"
+        activityViewController.typeActivity = type
         navigationController?.pushViewController(activityViewController, animated: true)
     }
 }

@@ -15,6 +15,7 @@ class TypeServices {
                          completion: @escaping ([Activity]) -> Void) {
         ProgressHUD.show()
         let typeURL = Services.activityType(participants: participants, type: type)
+        
         Services.getServices(url: typeURL) { response in
             switch response {
             case .success(let data):
