@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import ProgressHUD
 
 class RandomServices {
     
     func getRandomActivity(for participants: Int?, completion: @escaping ([Activity]) -> Void) {
+
         let randomURL = Services.activityRandom(participants: participants)
         Services.getServices(url: randomURL) { response in
             switch response {
@@ -18,18 +18,14 @@ class RandomServices {
                 do {
                     guard data != nil else {
                         completion([])
-                        ProgressHUD.showError()
                         return
                     }
                     let activity = try JSONDecoder().decode(Activity.self, from: data!)
                     completion([activity])
                 } catch {
-                    ProgressHUD.showError("Falló.", image: nil, interaction: true)
                     completion([])
                 }
-            case .failure(let error):
-                print(error)
-                ProgressHUD.showError("Se agotó el tiempo de espera.", image: nil, interaction: true)
+            case .failure(_):
                 completion([])
             }
         }

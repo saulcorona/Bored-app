@@ -44,13 +44,4 @@ class ActivityModel {
             completition()
         }
     }
-    
-    func loadValues(for participants: Int, with activityName: String? = nil) -> Int {
-        guard activityName != nil else {
-            getTypeActivity(for: participants, with: activityName!) {}
-            return defaultActivity.participants
-        }
-        getRandomActivity(for: participants) {}
-        return activity.participants
-    }
 }
