@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQG-Ah-aY4">
-                    <rect key="frame" x="0.0" y="245" width="414" height="300"/>
+                    <rect key="frame" x="0.0" y="181" width="414" height="300"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8yk-US-zBJ">
                             <rect key="frame" x="20" y="30" width="374" height="60"/>
@@ -155,13 +156,16 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="c8A-Ay-MTM"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <state key="normal" title="Try another!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="tryAnotherTapped:" destination="-1" eventType="touchUpInside" id="qqJ-GA-Zhf"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-7o-cJL">
-                    <rect key="frame" x="20" y="144" width="374" height="41"/>
+                    <rect key="frame" x="20" y="84" width="374" height="37"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
@@ -183,7 +187,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Bj-7o-cJL" secondAttribute="trailing" constant="20" id="JHJ-wt-Efh"/>
                 <constraint firstItem="0Bj-7o-cJL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SgQ-3l-pn5"/>
                 <constraint firstItem="rQG-Ah-aY4" firstAttribute="top" secondItem="0Bj-7o-cJL" secondAttribute="bottom" constant="60" id="WH4-Ja-C30"/>
-                <constraint firstItem="0Bj-7o-cJL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="aLI-7v-P8r"/>
+                <constraint firstItem="0Bj-7o-cJL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="aLI-7v-P8r"/>
                 <constraint firstItem="rQG-Ah-aY4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gPm-ux-yU7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uxe-Xs-Pu4" secondAttribute="trailing" constant="20" id="s6z-zo-U7K"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Uxe-Xs-Pu4" secondAttribute="bottom" constant="30" id="xge-bw-gEq"/>
