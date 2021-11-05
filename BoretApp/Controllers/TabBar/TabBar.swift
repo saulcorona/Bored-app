@@ -40,6 +40,7 @@ extension TabBarController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.image = image
         navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navController.navigationBar.backgroundColor = .systemGreen
         rootViewController.title = title
         rootViewController.navigationItem.title = title
