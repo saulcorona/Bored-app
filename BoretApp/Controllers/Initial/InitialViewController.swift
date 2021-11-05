@@ -40,10 +40,6 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         if userTextField.hasText {
             User.shared.participants = Int(userTextField.text!)
             showCategories() 
-        } else {
-            showAlert(title: "You have to enter a number ☹️",
-                message: nil,
-                actions: ["OK"])
         }
     }
 }
@@ -62,6 +58,7 @@ extension InitialViewController {
 }
 
 extension InitialViewController {
+
     private func goToTermsController(){
         let vc = TermsViewController(nibName: "TermsViewController", bundle: nil)
         vc.modalPresentationStyle = .fullScreen
@@ -78,6 +75,7 @@ extension InitialViewController {
 
 // MARK: Keyboard Configuration
 extension InitialViewController {
+
     func animateKeyboard() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -94,15 +92,5 @@ extension InitialViewController {
 
     @objc func tapDone() {
         dismissKeyboard()
-    }
-}
-
-extension InitialViewController {
-    func showAlert(title: String, message: String?, actions: [String]) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        actions.forEach { value in
-            alert.addAction(UIAlertAction(title: value, style: .default, handler: nil))
-        }
-        self.present(alert, animated: true)
     }
 }
